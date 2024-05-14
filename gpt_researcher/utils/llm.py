@@ -11,7 +11,7 @@ from langchain.output_parsers import PydanticOutputParser
 from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
-from gpt_researcher.master.prompts import auto_agent_instructions, generate_subtopics_prompt
+from master.prompts import auto_agent_instructions, generate_subtopics_prompt
 
 from .validators import Subtopics
 
@@ -28,7 +28,7 @@ def get_provider(llm_provider):
             from ..llm_provider import GoogleProvider
             llm_provider = GoogleProvider
         case "groq":
-            from ..llm_provider import GroqProvider
+            from llm_provider import GroqProvider
             llm_provider = GroqProvider
 
         case _:

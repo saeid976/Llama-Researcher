@@ -2,6 +2,7 @@ import os
 
 from colorama import Fore, Style
 from groq import Groq
+from langchain_groq import ChatGroq
 
 
 class GroqProvider:
@@ -33,7 +34,7 @@ class GroqProvider:
 
     def get_llm_model(self):
         # Initializing the chat model
-        llm = Groq()
+        llm = ChatGroq()
 
         return llm
 
