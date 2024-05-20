@@ -10,7 +10,7 @@ setup(
     name="llama-researcher",
     version="0.4.3",
     description="Llama Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks.",
-    package_dir={'llama_researcher': 'gpt_researcher'},
+    package_dir={'llama_researcher-surf': 'gpt_researcher'},
     packages=find_packages(),
     long_description=long_description,
     long_description_content_type="text/markdown",
