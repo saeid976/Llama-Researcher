@@ -3,9 +3,9 @@ import json
 
 import markdown
 
-from master.prompts import *
-from scraper.scraper import Scraper
-from utils.llm import *
+from gpt_researcher.master.prompts import *
+from gpt_researcher.scraper.scraper import Scraper
+from gpt_researcher.utils.llm import *
 
 def get_retriever(retriever):
     """
