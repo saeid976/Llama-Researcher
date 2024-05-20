@@ -19,30 +19,30 @@ def get_retriever(retriever):
     """
     match retriever:
         case "tavily":
-            from retrievers import TavilySearch
+            from gpt_researcher.retrievers import TavilySearch
             retriever = TavilySearch
         case "tavily_news":
-            from retrievers import TavilyNews
+            from gpt_researcher.retrievers import TavilyNews
             retriever = TavilyNews
         case "google":
-            from retrievers import GoogleSearch
+            from gpt_researcher.retrievers import GoogleSearch
             retriever = GoogleSearch
         case "searx":
-            from retrievers import SearxSearch
+            from gpt_researcher.retrievers import SearxSearch
             retriever = SearxSearch
         case "serpapi":
             raise NotImplementedError(
                 "SerpApiSearch is not fully implemented yet.")
-            from retrievers import SerpApiSearch
+            from gpt_researcher.retrievers import SerpApiSearch
             retriever = SerpApiSearch
         case "googleSerp":
-            from retrievers import SerperSearch
+            from gpt_researcher.retrievers import SerperSearch
             retriever = SerperSearch
         case "duckduckgo":
-            from retrievers import Duckduckgo
+            from gpt_researcher.retrievers import Duckduckgo
             retriever = Duckduckgo
         case "BingSearch":
-            from retrievers import BingSearch
+            from gpt_researcher.retrievers import BingSearch
             retriever = BingSearch
 
         case _:
