@@ -131,6 +131,9 @@ async def construct_subtopics(task: str, data: str, config, subtopics: list = []
         elif config.llm_provider == "azureopenai":
             from langchain_openai import AzureChatOpenAI
             model = AzureChatOpenAI(model=config.smart_llm_model)
+        elif config.llm_provider == "groq":
+            from langchain_groq import ChatGroq
+            model = ChatGroq(model=config.smart_llm_model)
         else:
             return []
 
