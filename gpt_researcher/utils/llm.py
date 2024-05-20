@@ -28,7 +28,7 @@ def get_provider(llm_provider):
             from ..llm_provider import GoogleProvider
             llm_provider = GoogleProvider
         case "groq":
-            from llm_provider import GroqProvider
+            from ..llm_provider import GroqProvider
             llm_provider = GroqProvider
 
         case _:
