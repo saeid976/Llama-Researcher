@@ -11,7 +11,7 @@ from langchain.output_parsers import PydanticOutputParser
 from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
-from master.prompts import auto_agent_instructions, generate_subtopics_prompt
+from gpt_researcher.master.prompts import auto_agent_instructions, generate_subtopics_prompt
 
 from .validators import Subtopics
 
