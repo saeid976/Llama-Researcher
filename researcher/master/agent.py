@@ -1,16 +1,16 @@
 import asyncio
 import time
 
-from gpt_researcher.config import Config
-from gpt_researcher.context.compression import ContextCompressor
-from gpt_researcher.master.functions import *
-from gpt_researcher.memory import Memory
-from gpt_researcher.utils.enum import ReportType
+from researcher.config import Config
+from researcher.context.compression import ContextCompressor
+from researcher.master.functions import *
+from researcher.memory import Memory
+from researcher.utils.enum import ReportType
 
 
-class GPTResearcher:
+class Researcher:
     """
-    GPT Researcher
+    Researcher
     """
 
     def __init__(

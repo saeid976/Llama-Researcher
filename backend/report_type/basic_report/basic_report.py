@@ -1,4 +1,4 @@
-from gpt_researcher.master.agent import GPTResearcher
+from researcher.master.agent import Researcher
 from fastapi import WebSocket
 
 class BasicReport():
@@ -11,7 +11,7 @@ class BasicReport():
         
     async def run(self):
         # Initialize researcher
-        researcher = GPTResearcher(self.query, self.report_type, self.source_urls, self.config_path, self.websocket)
+        researcher = Researcher(self.query, self.report_type, self.source_urls, self.config_path, self.websocket)
         
         # Run research
         await researcher.conduct_research()

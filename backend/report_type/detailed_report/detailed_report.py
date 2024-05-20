@@ -2,8 +2,8 @@ import asyncio
 
 from fastapi import WebSocket
 
-from gpt_researcher.master.agent import GPTResearcher
-from gpt_researcher.master.functions import (add_source_urls, extract_headers,
+from researcher.master.agent import Researcher
+from researcher.master.functions import (add_source_urls, extract_headers,
                                              table_of_contents)
 
 
@@ -16,7 +16,7 @@ class DetailedReport():
         self.subtopics = subtopics
         
         # A parent task assistant. Adding research_report as default
-        self.main_task_assistant = GPTResearcher(self.query, "research_report", self.source_urls, self.config_path, self.websocket)
+        self.main_task_assistant = Researcher(self.query, "research_report", self.source_urls, self.config_path, self.websocket)
 
         self.existing_headers = []
         # This is a global variable to store the entire context accumulated at any point through searching and scraping
@@ -97,7 +97,7 @@ class DetailedReport():
 
     async def _get_subtopic_report(self, subtopic: dict) -> tuple:
         current_subtopic_task = subtopic.get("task")
-        subtopic_assistant = GPTResearcher(
+        subtopic_assistant = Researcher(
             query=current_subtopic_task,
             report_type="subtopic_report",
             websocket=self.websocket,

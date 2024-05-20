@@ -1,5 +1,5 @@
 langgraph==0.0.40
-gpt_researcher
+researcher
 langchain-community
 python-dotenv
 weasyprint

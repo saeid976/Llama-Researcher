@@ -28,16 +28,16 @@ export TAVILY_API_KEY={Your Tavily API Key here}
 ## Example Usage 📝
 
 ```python
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 import asyncio
 
 
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 import asyncio
 
 
 async def get_report(query: str, report_type: str) -> str:
-    researcher = GPTResearcher(query, report_type)
+    researcher = Researcher(query, report_type)
     research_result = await researcher.conduct_research()
     report = await researcher.write_report()
     return report
@@ -79,14 +79,14 @@ report_type = "outline_report"
 
 ```python
 from fastapi import FastAPI
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 import asyncio
 
 app = FastAPI()
 
 @app.get("/report/{report_type}")
 async def get_report(query: str, report_type: str) -> dict:
-    researcher = GPTResearcher(query, report_type)
+    researcher = Researcher(query, report_type)
     research_result = await researcher.conduct_research()
     report = await researcher.write_report()
     return {"report": report}
@@ -105,14 +105,14 @@ pip install 'flask[async]'
 
 ```python
 from flask import Flask, request
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 
 app = Flask(__name__)
 
 @app.route('/report/<report_type>', methods=['GET'])
 async def get_report(report_type):
     query = request.args.get('query')
-    researcher = GPTResearcher(query, report_type)
+    researcher = Researcher(query, report_type)
     research_result = await researcher.conduct_research()
     report = await researcher.write_report()
     return report

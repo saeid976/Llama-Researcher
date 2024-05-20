@@ -1,4 +1,4 @@
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 from colorama import Fore, Style
 from .utils.views import print_agent_output
 
@@ -9,7 +9,7 @@ class ResearchAgent:
 
     async def research(self, query: str, research_report: str = "research_report", parent_query: str = "", verbose=True):
         # Initialize the researcher
-        researcher = GPTResearcher(query=query, report_type=research_report, parent_query=parent_query, verbose=verbose)
+        researcher = Researcher(query=query, report_type=research_report, parent_query=parent_query, verbose=verbose)
         # Conduct research on the given query
         await researcher.conduct_research()
         # Write the report

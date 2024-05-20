@@ -6,11 +6,11 @@ The GPT Researcher package allows you to tailor the research to your needs such 
 You can specify the sources you want the GPT Researcher to research on by providing a list of URLs. The GPT Researcher will then conduct research on the provided sources.
 
 ```python
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 import asyncio
 
 async def get_report(query: str, report_type: str, sources: list) -> str:
-    researcher = GPTResearcher(query=query, report_type=report_type, source_urls=sources)
+    researcher = Researcher(query=query, report_type=report_type, source_urls=sources)
     await researcher.conduct_research()
     report = await researcher.write_report()
     return report
@@ -27,14 +27,14 @@ if __name__ == "__main__":
 ### Specify Agent Prompt 📝
 
 You can specify the agent prompt instruction upon which the research is conducted. This allows you to guide the research in a specific direction and tailor the report layout.
-Simplay pass the prompt as the `query` argument to the `GPTResearcher` class and the "custom_report" `report_type`.
+Simplay pass the prompt as the `query` argument to the `Researcher` class and the "custom_report" `report_type`.
 
 ```python
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 import asyncio
 
 async def get_report(prompt: str, report_type: str) -> str:
-    researcher = GPTResearcher(query=prompt, report_type=report_type)
+    researcher = Researcher(query=prompt, report_type=report_type)
     await researcher.conduct_research()
     report = await researcher.write_report()
     return report

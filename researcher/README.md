@@ -27,12 +27,12 @@ $ export TAVILY_API_KEY={Your Tavily API Key here}
 ```
 > **Step 3** - Start Coding using GPT Researcher in your own code, example:
 ```python
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 import asyncio
 
 
 async def get_report(query: str, report_type: str) -> str:
-    researcher = GPTResearcher(query, report_type)
+    researcher = Researcher(query, report_type)
     report = await researcher.run()
     return report
 

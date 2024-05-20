@@ -3,9 +3,9 @@ import json
 
 import markdown
 
-from gpt_researcher.master.prompts import *
-from gpt_researcher.scraper.scraper import Scraper
-from gpt_researcher.utils.llm import *
+from researcher.master.prompts import *
+from researcher.scraper.scraper import Scraper
+from researcher.utils.llm import *
 
 def get_retriever(retriever):
     """
@@ -19,30 +19,30 @@ def get_retriever(retriever):
     """
     match retriever:
         case "tavily":
-            from gpt_researcher.retrievers import TavilySearch
+            from researcher.retrievers import TavilySearch
             retriever = TavilySearch
         case "tavily_news":
-            from gpt_researcher.retrievers import TavilyNews
+            from researcher.retrievers import TavilyNews
             retriever = TavilyNews
         case "google":
-            from gpt_researcher.retrievers import GoogleSearch
+            from researcher.retrievers import GoogleSearch
             retriever = GoogleSearch
         case "searx":
-            from gpt_researcher.retrievers import SearxSearch
+            from researcher.retrievers import SearxSearch
             retriever = SearxSearch
         case "serpapi":
             raise NotImplementedError(
                 "SerpApiSearch is not fully implemented yet.")
-            from gpt_researcher.retrievers import SerpApiSearch
+            from researcher.retrievers import SerpApiSearch
             retriever = SerpApiSearch
         case "googleSerp":
-            from gpt_researcher.retrievers import SerperSearch
+            from researcher.retrievers import SerperSearch
             retriever = SerperSearch
         case "duckduckgo":
-            from gpt_researcher.retrievers import Duckduckgo
+            from researcher.retrievers import Duckduckgo
             retriever = Duckduckgo
         case "BingSearch":
-            from gpt_researcher.retrievers import BingSearch
+            from researcher.retrievers import BingSearch
             retriever = BingSearch
 
         case _:

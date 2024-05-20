@@ -1,4 +1,4 @@
-from gpt_researcher import GPTResearcher
+from researcher import Researcher
 import asyncio
 
 
@@ -13,7 +13,7 @@ async def main():
     report_type = "research_report"
 
     # Initialize the researcher
-    researcher = GPTResearcher(query=query, report_type=report_type, config_path=None)
+    researcher = Researcher(query=query, report_type=report_type, config_path=None)
     # Conduct research on the given query
     await researcher.conduct_research()
     # Write the report

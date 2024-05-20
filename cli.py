@@ -1,5 +1,5 @@
 """
-Provides a command line interface for the GPTResearcher class.
+Provides a command line interface for the Researcher class.
 
 Usage:
 
@@ -15,8 +15,8 @@ from uuid import uuid4
 
 from dotenv import load_dotenv
 
-from gpt_researcher import GPTResearcher
-from gpt_researcher.utils.enum import ReportType
+from researcher import Researcher
+from researcher.utils.enum import ReportType
 
 # =============================================================================
 # CLI
@@ -72,7 +72,7 @@ async def main(args):
     Conduct research on the given query, generate the report, and write
     it as a markdown file to the output directory.
     """
-    researcher = GPTResearcher(
+    researcher = Researcher(
         query=args.query,
         report_type=args.report_type)
 

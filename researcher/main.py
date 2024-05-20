@@ -1,8 +1,8 @@
-from master.agent import GPTResearcher
+from master.agent import Researcher
 import asyncio
 
 async def get_report(query: str, report_type: str) -> str:
-    researcher = GPTResearcher(query, report_type)
+    researcher = Researcher(query, report_type)
     report = await researcher.conduct_research()
     return report
 

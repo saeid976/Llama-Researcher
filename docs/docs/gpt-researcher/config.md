@@ -16,7 +16,7 @@ As seen below, OpenAI still stands as the superior LLM. We assume it will stay t
 It may not come as a surprise that our default search engine is [Tavily](https://app.tavily.com). We're aimed at building our search engine to tailor the exact needs of searching and aggregating for the most factual and unbiased information for research tasks.
 We highly recommend using it with GPT Researcher, and more generally with LLM applications that are built with RAG. To learn more about our search API [see here](/docs/tavily-api/introduction)
 
-Here is an example of the default config.py file found in `/gpt_researcher/config/`:
+Here is an example of the default config.py file found in `/researcher/config/`:
 
 ```python
 def __init__(self, config_file: str = None):
