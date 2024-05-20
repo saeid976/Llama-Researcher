@@ -1,7 +1,7 @@
 import asyncio
 import time
 
-from config import Config
+from gpt_researcher.config import Config
 from context.compression import ContextCompressor
 from master.functions import *
 from memory import Memory
