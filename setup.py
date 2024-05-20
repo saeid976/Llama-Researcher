@@ -14,7 +14,7 @@ setup(
     packages=find_packages(),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/saeid976/researcher-surf.git",
+    url="https://github.com/saeid976/llama-researcher-surf.git",
     author="saeid",
     author_email="saeid2015dr@gmail.com",
     license="MIT",
