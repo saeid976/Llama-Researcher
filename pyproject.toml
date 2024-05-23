@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "gpt-researcher"
+name = "researcher"
 version = "0.0.5"
-description = "GPT Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks."
+description = "Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks."
 authors = ["Tavily <support@tavily.com>"]
 license = "MIT"
 readme = "README.md"
