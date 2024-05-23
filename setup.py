@@ -10,7 +10,7 @@ setup(
     name="Researcher",
     version="0.4.3",
     description="Llama Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks.",
-    package_dir={'': 'researcher'},
+    package_dir={'Llama-Researcher': 'researcher'},
     packages=find_packages(where='researcher'),
     long_description=long_description,
     long_description_content_type="text/markdown",
